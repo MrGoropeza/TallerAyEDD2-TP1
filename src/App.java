@@ -9,6 +9,19 @@ public class App {
 
         EsAciclico esAciclico = new EsAciclico(grafo);
         esAciclico.esAciclico();
+
+        Arbol arbol = new Arbol(1);
+        var nodo1 = arbol.insertarNodo(arbol.getRaiz(), 2);
+        var nodo2 = arbol.insertarNodo(arbol.getRaiz(), 3);
+        var nodo3 = arbol.insertarNodo(nodo1, 4);
+        var nodo4 = arbol.insertarNodo(nodo1, 5);
+        arbol.insertarNodo(nodo2, 6);
+        arbol.insertarNodo(nodo3, 7);
+        arbol.insertarNodo(nodo4, 8);
+
+        System.out.println(arbol);
+        System.out.println("Recorrido Preorden:" + arbol.recorridoPreorden());
+        System.out.println("Recorrido Postorden:" + arbol.recorridoPostorden());
     }
 
     private static Grafo VuelosGoodFly() {
