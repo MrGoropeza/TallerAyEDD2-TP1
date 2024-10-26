@@ -1,15 +1,19 @@
 public class App {
     public static void main(String[] args) throws Exception {
+        System.out.println("Actividad 1: Representación de vuelos con un grafo");
         Grafo grafo = VuelosGoodFly();
         System.out.println(grafo);
 
+        System.out.println("\nActividad 2: Algoritmo del camino mínimo sin pesos");
         BFS bfs = new BFS(grafo, 0);
         bfs.ejecutar();
         System.out.println(bfs);
 
+        System.out.println("\n\nActividad 3: Determinar si un grafo es acíclico");
         EsAciclico esAciclico = new EsAciclico(grafo);
         esAciclico.esAciclico();
 
+        System.out.println("\n\nActividad 4: Representación de un árbol");
         Arbol arbol = new Arbol(1);
         var nodo1 = arbol.insertarNodo(arbol.getRaiz(), 2);
         var nodo2 = arbol.insertarNodo(arbol.getRaiz(), 3);
@@ -20,8 +24,14 @@ public class App {
         arbol.insertarNodo(nodo4, 8);
 
         System.out.println(arbol);
+        System.out.println("\nActividad 5: Recorrido del árbol en preorden y postorden");
         System.out.println("Recorrido Preorden:" + arbol.recorridoPreorden());
         System.out.println("Recorrido Postorden:" + arbol.recorridoPostorden());
+
+        System.out.println("\n\nActividad 6: Algoritmo del camino mínimo con pesos positivos (Dijkstra)");
+        Dijkstra dijkstra = new Dijkstra(grafo, 1);
+        dijkstra.ejecutar();
+        System.out.println(dijkstra);
     }
 
     private static Grafo VuelosGoodFly() {
