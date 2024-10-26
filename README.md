@@ -1,18 +1,37 @@
-## Getting Started
+## Taller de Algoritmos y Estructura de Datos II - TP1
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este proyecto tiene como objetivo implementar y visualizar estructuras de datos gráficas y algoritmos en el lenguaje de programación Java.
 
-## Folder Structure
+# Contenidos del Trabajo
 
-The workspace contains two folders by default, where:
+1. **Implementación del TDA Grafo**:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Implementación en Java del tipo abstracto de datos grafo, utilizando la matriz de adyacencias como base.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+2. **Algoritmo de Camino Mínimo Sin Pesos**:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Implementación en Java para calcular el camino mínimo sin pesos dentro del esquema, mostrando los resultados en pantalla.
 
-## Dependency Management
+3. **Determinación de Grafos Acíclicos**:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Implementación de un algoritmo en Java para identificar los grafos acíclicos en el diagrama y visualizar los resultados.
+
+4. **Operaciones del TDA Árbol**:
+
+- Desarrollo de un algoritmo en Java que implemente las operaciones del TDA árbol, tomando el modelo de grafo como referencia.
+
+5. **Recorrido Recursivo del Árbol**:
+
+- Creación de una función en Java que permita recorrer el árbol resultante de manera recursiva.
+
+6. **Algoritmo de Dijkstra**:
+
+- Implementación del algoritmo de Dijkstra en Java para determinar el camino más corto entre dos vértices dados, con visualización de los resultados.
+
+# Estructura del Proyecto
+
+- **src**: Carpeta para el código fuente.
+
+- **lib**: Carpeta para las dependencias.
+
+- **bin**: Carpeta para los archivos compilados.
