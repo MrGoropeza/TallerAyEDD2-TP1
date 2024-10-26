@@ -1,8 +1,13 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Grafo {
     private int vertices;
     private int[][] matrizAdyacencia;
+    private Map<Integer, List<Integer>> listadoAdyacencia;
 
     // Inicializar grafo con su matriz de adyacencia de tamaño (vertices x vertices)
     public Grafo(int vertices) {
@@ -10,6 +15,11 @@ public class Grafo {
         matrizAdyacencia = new int[vertices][vertices];
         for (int[] fila : matrizAdyacencia) {
             Arrays.fill(fila, 0);
+        }
+
+        listadoAdyacencia = new HashMap<>();
+        for (int i = 0; i < vertices; i++) {
+            listadoAdyacencia.put(i, new ArrayList<>());
         }
     }
 
@@ -19,6 +29,10 @@ public class Grafo {
 
     public int[][] getMatrizAdyacencia() {
         return matrizAdyacencia;
+    }
+
+    public Map<Integer, List<Integer>> getListadoAdyacencia() {
+        return listadoAdyacencia;
     }
 
     // Agregar una arco a la matriz de adyacencia
@@ -46,10 +60,19 @@ public class Grafo {
 
     private void agregarArco(int origen, int destino, int peso, boolean noDirigido) {
         if (noDirigido) {
+            // Agregar arco no dirigido a la matriz
             matrizAdyacencia[origen][destino] = peso;
             matrizAdyacencia[destino][origen] = peso;
+
+            // Agregar arco dirigido a la lista de adyacencia
+            listadoAdyacencia.get(origen).add(destino);
+            listadoAdyacencia.get(destino).add(origen);
         } else {
+            // Agregar arco dirigido a la matriz
             matrizAdyacencia[origen][destino] = peso;
+
+            // Agregar arco dirigido a la lista de adyacencia
+            listadoAdyacencia.get(origen).add(destino);
         }
     }
 }

@@ -6,6 +6,9 @@ public class App {
         BFS bfs = new BFS(grafo, 0);
         bfs.ejecutar();
         System.out.println(bfs);
+
+        EsAciclico esAciclico = new EsAciclico(grafo);
+        esAciclico.esAciclico();
     }
 
     private static Grafo VuelosGoodFly() {
